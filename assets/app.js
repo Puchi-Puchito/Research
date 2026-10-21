@@ -18,13 +18,25 @@
     return 12742 * Math.asin(Math.sqrt(x));
   };
 
+  /* ---------------- Vista previa al pasar el mouse ---------------- */
+  const PV = {
+    event: (e) => `<div class="pv"><div class="pv-eb" style="color:${RCOL(e.rubro)}">${esc(e.rubro_nombre)}</div>
+      <div class="pv-t">${esc(e.nombre)}</div><div class="pv-s">${esc(e.sede)}</div>
+      <div class="pv-n"><b>${esc(e.convocatoria)}</b> <span>${esc(e.unidad)}</span></div>
+      <div class="pv-s">Próxima edición: ${esc(e.proxima_edicion)}</div><div class="pv-h">Click para ver la ficha</div></div>`,
+    ooh: (o) => `<div class="pv"><div class="pv-eb">Pauta OFF · zona de referencia</div>
+      <div class="pv-t">${esc(o.zona)}</div><div class="pv-s">${esc(o.operador)}</div><div class="pv-s">${esc(o.formato)}</div></div>`,
+    store: (s) => `<div class="pv"><div class="pv-eb" style="color:var(--cen)">${esc(s.cadena)} · Cencosud</div>
+      <div class="pv-t">${esc(s.nombre)}</div><div class="pv-s">${esc(s.tipo)} · ${esc(s.provincia)}</div></div>`,
+  };
+
   /* ---------------- Adaptador Google Maps ---------------- */
   function loadGoogle(key) {
     return new Promise((resolve, reject) => {
       window.__gmReady = () => resolve();
       window.gm_authFailure = () => reject(new Error("La clave de Google Maps fue rechazada."));
       const s = document.createElement("script");
-      s.src = "https://maps.googleapis.com/maps/api/js?key=" + encodeURIComponent(key) + "&v=weekly&callback=__gmReady&language=es&region=AR";
+      s.src = "https://maps.googleapis.com/maps/api/js?key=" + encodeURIComponent(key) + "&v=weekly&loading=async&callback=__gmReady&language=es&region=AR";
       s.async = true;
       s.onerror = () => reject(new Error("No se pudo cargar Google Maps."));
       document.head.appendChild(s);
@@ -55,29 +67,39 @@
     });
     const layers = { ev: [], ooh: [], cen: [] };
     let hl = [];
+    const hover = new g.InfoWindow({ disableAutoPan: true, headerDisabled: true });
+    const hoverable = (m, html, clickShows) => {
+      const show = () => { hover.setContent(html); hover.open({ map, anchor: m, shouldFocus: false }); };
+      m.addListener("mouseover", show);
+      m.addListener("mouseout", () => hover.close());
+      if (clickShows) m.addListener("click", show);
+    };
     const DIAMOND = "M 0,-7 7,0 0,7 -7,0 z";
     const api = {
       kind: "google",
       addEvent(e, onClick) {
         const m = new g.Marker({
-          position: { lat: e.lat, lng: e.lon }, map, title: e.nombre + " · " + e.sede, zIndex: 30,
+          position: { lat: e.lat, lng: e.lon }, map, zIndex: 30,
           icon: { path: g.SymbolPath.CIRCLE, scale: 8, fillColor: RCOL(e.rubro), fillOpacity: 1, strokeColor: "#ffffff", strokeWeight: 2.5 },
         });
-        m.addListener("click", onClick);
+        hoverable(m, PV.event(e), false);
+        m.addListener("click", () => { hover.close(); onClick(); });
         layers.ev.push({ id: e.id, m });
       },
       addOoh(o) {
         const m = new g.Marker({
-          position: { lat: o.lat, lng: o.lon }, map, title: o.zona + " · " + o.operador + " · " + o.formato, zIndex: 20,
+          position: { lat: o.lat, lng: o.lon }, map, zIndex: 20,
           icon: { path: DIAMOND, scale: 1, fillColor: css("--ooh"), fillOpacity: 1, strokeColor: "#ffffff", strokeWeight: 1.5 },
         });
+        hoverable(m, PV.ooh(o), true);
         layers.ooh.push({ m });
       },
       addStore(s) {
         const m = new g.Marker({
-          position: { lat: s.lat, lng: s.lon }, map, title: s.nombre + " · " + s.tipo, zIndex: 10,
+          position: { lat: s.lat, lng: s.lon }, map, zIndex: 10,
           icon: { path: g.SymbolPath.CIRCLE, scale: 4, fillColor: css("--cen"), fillOpacity: 0.95, strokeColor: "#ffffff", strokeWeight: 1 },
         });
+        hoverable(m, PV.store(s), true);
         layers.cen.push({ m });
       },
       showEvents(ids) { layers.ev.forEach((x) => x.m.setMap(ids.has(x.id) ? map : null)); },
@@ -130,17 +152,17 @@
       kind: "leaflet",
       addEvent(e, onClick) {
         const m = L.circleMarker([e.lat, e.lon], { radius: 8, weight: 2.5, color: "#fff", fillColor: RCOL(e.rubro), fillOpacity: 1 });
-        m.bindTooltip(`<b>${esc(e.nombre)}</b><br>${esc(e.sede)}`, { direction: "top", offset: [0, -6] });
+        m.bindTooltip(PV.event(e), { direction: "top", offset: [0, -8], className: "pv-tt" });
         m.on("click", onClick); evm[e.id] = m; groups.ev.addLayer(m);
       },
       addOoh(o) {
         const m = L.marker([o.lat, o.lon], { icon: L.divIcon({ className: "", html: '<div class="mk-ooh"></div>', iconSize: [12, 12], iconAnchor: [6, 6] }), keyboard: false });
-        m.bindTooltip(`<b>${esc(o.zona)}</b><br>${esc(o.operador)}<br>${esc(o.formato)}`, { direction: "top", offset: [0, -6] });
+        m.bindTooltip(PV.ooh(o), { direction: "top", offset: [0, -8], className: "pv-tt" });
         groups.ooh.addLayer(m);
       },
       addStore(s) {
         const m = L.circleMarker([s.lat, s.lon], { radius: 3.5, weight: 1, color: "#fff", fillColor: css("--cen"), fillOpacity: 0.95 });
-        m.bindTooltip(`${esc(s.nombre)} · ${esc(s.tipo)}`, { direction: "top" });
+        m.bindTooltip(PV.store(s), { direction: "top", offset: [0, -4], className: "pv-tt" });
         groups.cen.addLayer(m);
       },
       showEvents(ids) { groups.ev.clearLayers(); Object.entries(evm).forEach(([id, m]) => ids.has(id) && groups.ev.addLayer(m)); },
