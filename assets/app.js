@@ -68,12 +68,19 @@
     const layers = { ev: [], ooh: [], cen: [] };
     let hl = [];
     const hover = new g.InfoWindow({ disableAutoPan: true, headerDisabled: true });
-    const hoverable = (m, html, clickShows) => {
-      const show = () => { hover.setContent(html); hover.open({ map, anchor: m, shouldFocus: false }); };
+    let hoverTimer = null;
+    const hoverable = (m, html, clickShows, lift) => {
+      m.set("anchorPoint", new g.Point(0, -(lift || 8)));
+      const show = () => {
+        clearTimeout(hoverTimer);
+        hover.setContent(html);
+        hover.open({ map, anchor: m, shouldFocus: false });
+      };
       m.addListener("mouseover", show);
-      m.addListener("mouseout", () => hover.close());
+      m.addListener("mouseout", () => { clearTimeout(hoverTimer); hoverTimer = setTimeout(() => hover.close(), 150); });
       if (clickShows) m.addListener("click", show);
     };
+    map.addListener("click", () => hover.close());
     const DIAMOND = "M 0,-7 7,0 0,7 -7,0 z";
     const api = {
       kind: "google",
@@ -82,7 +89,7 @@
           position: { lat: e.lat, lng: e.lon }, map, zIndex: 30,
           icon: { path: g.SymbolPath.CIRCLE, scale: 8, fillColor: RCOL(e.rubro), fillOpacity: 1, strokeColor: "#ffffff", strokeWeight: 2.5 },
         });
-        hoverable(m, PV.event(e), false);
+        hoverable(m, PV.event(e), false, 12);
         m.addListener("click", () => { hover.close(); onClick(); });
         layers.ev.push({ id: e.id, m });
       },
@@ -91,7 +98,7 @@
           position: { lat: o.lat, lng: o.lon }, map, zIndex: 20,
           icon: { path: DIAMOND, scale: 1, fillColor: css("--ooh"), fillOpacity: 1, strokeColor: "#ffffff", strokeWeight: 1.5 },
         });
-        hoverable(m, PV.ooh(o), true);
+        hoverable(m, PV.ooh(o), true, 9);
         layers.ooh.push({ m });
       },
       addStore(s) {
@@ -99,7 +106,7 @@
           position: { lat: s.lat, lng: s.lon }, map, zIndex: 10,
           icon: { path: g.SymbolPath.CIRCLE, scale: 4, fillColor: css("--cen"), fillOpacity: 0.95, strokeColor: "#ffffff", strokeWeight: 1 },
         });
-        hoverable(m, PV.store(s), true);
+        hoverable(m, PV.store(s), true, 6);
         layers.cen.push({ m });
       },
       showEvents(ids) { layers.ev.forEach((x) => x.m.setMap(ids.has(x.id) ? map : null)); },
