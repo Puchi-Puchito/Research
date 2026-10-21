@@ -1,0 +1,255 @@
+id,cadena,nombre,tipo,provincia,lat,lon
+9_1_10,Vea,Vea Larrea,Supermercado,CABA,-34.5985,-58.4032
+9_1_110,Vea,Vea Tres Cerritos,Supermercado,Salta,-24.7581,-65.3986
+9_1_113,Vea,Vea Río Cuarto,Supermercado,Córdoba,-33.116,-64.3509
+9_1_114,Vea,Vea Juan B. Justo,Supermercado,Córdoba,-31.3796,-64.1756
+9_1_119,Vea,Vea Aráoz,Supermercado,CABA,-34.6148,-58.4349
+9_1_122,Vea,Vea Bahía Blanca I,Supermercado,Buenos Aires,-38.7301,-62.2502
+9_1_125,Vea,Vea Sarmiento,Supermercado,Tucumán,-26.8255,-65.2168
+9_1_127,Vea,Vea Bahía Blanca. II,Supermercado,Buenos Aires,-38.7081,-62.2686
+9_1_13,Vea,Vea Santiago,Hipermercado,Santiago del Estero,-27.7786,-64.2578
+9_1_134,Vea,Vea Roca,Supermercado,Tucumán,-26.8398,-65.2228
+9_1_140,Vea,Vea Orán - Salta,Supermercado,Salta,-23.1308,-64.3261
+9_1_150,Vea,Vea Padua,Supermercado,Buenos Aires,-34.6657,-58.6971
+9_1_153,Vea,Vea Morón I,Supermercado,Buenos Aires,-34.6488,-58.6126
+9_1_159,Vea,Vea Merlo II,Supermercado,Buenos Aires,-34.6733,-58.7246
+9_1_162,Vea,Vea Luján,Supermercado,Buenos Aires,-34.5623,-59.1199
+9_1_165,Vea,Vea Mercedes,Supermercado,Buenos Aires,-34.6533,-59.4327
+9_1_170,Vea,Vea 1,Supermercado,Mendoza,-32.9174,-68.8461
+9_1_171,Vea,Vea 2,Supermercado,Mendoza,-32.9393,-68.8347
+9_1_172,Vea,Vea 3,Supermercado,Mendoza,-32.8942,-68.789
+9_1_173,Vea,Vea 5,Supermercado,Mendoza,-32.9039,-68.8034
+9_1_174,Vea,Vea 6,Supermercado,Mendoza,-32.8897,-68.859
+9_1_175,Vea,Vea 7,Supermercado,Mendoza,-32.9127,-68.8762
+9_1_176,Vea,Vea 8,Supermercado,Mendoza,-32.9414,-68.8483
+9_1_179,Vea,Vea 11,Supermercado,Mendoza,-32.8512,-68.8412
+9_1_180,Vea,Vea 12,Supermercado,Mendoza,-32.8707,-68.8337
+9_1_182,Vea,Vea 15,Supermercado,Mendoza,-33.0818,-68.4722
+9_1_183,Vea,Vea 16,Supermercado,Mendoza,-33.0863,-68.4807
+9_1_184,Vea,Vea 17,Supermercado,Mendoza,-33.0708,-68.4729
+9_1_185,Vea,Vea 18,Supermercado,Mendoza,-33.0325,-68.8777
+9_1_187,Vea,Vea 20,Supermercado,Mendoza,-32.9824,-68.7883
+9_1_188,Vea,Vea 21,Supermercado,Mendoza,-32.8997,-68.8598
+9_1_189,Vea,Vea 23 - Shopping,Supermercado,Mendoza,-32.9018,-68.7971
+9_1_19,Vea,Vea Bulnes,Supermercado,CABA,-34.5992,-58.4199
+9_1_190,Vea,Vea 24,Supermercado,Mendoza,-32.8628,-68.8222
+9_1_191,Vea,Vea 25,Supermercado,Mendoza,-34.6128,-68.3403
+9_1_192,Vea,Vea 26,Supermercado,Mendoza,-32.9557,-68.8577
+9_1_193,Vea,Vea 27,Supermercado,San Juan,-31.5278,-68.5671
+9_1_194,Vea,Vea 28,Supermercado,San Juan,-31.5309,-68.521
+9_1_195,Vea,Vea 29 - M.T. de Alvear Cba,Supermercado,Córdoba,-33.1105,-64.3401
+9_1_196,Vea,Vea Mayorista,Supermercado,Mendoza,-32.8884,-68.8252
+9_1_20,Vea,Vea Lanús,Supermercado,Buenos Aires,-34.7031,-58.3939
+9_1_220,Vea,Vea 30,Supermercado,Mendoza,-33.0359,-68.879
+9_1_232,Vea,Vea Villa María II,Supermercado,Córdoba,-32.4086,-63.2565
+9_1_234,Vea,Vea Caseros,Supermercado,Buenos Aires,-34.6106,-58.5608
+9_1_240,Vea,Vea Boedo,Supermercado,CABA,-34.6216,-58.4278
+9_1_241,Vea,Vea Edison,Supermercado,Buenos Aires,-38.0469,-57.5535
+9_1_242,Vea,Vea Patio Palmera,Supermercado,Catamarca,-28.448,-65.7187
+9_1_243,Vea,Vea Catamarca,Supermercado,Catamarca,-28.4603,-65.7728
+9_1_32,Vea,Vea Buchardo,Supermercado,Córdoba,-31.4034,-64.1655
+9_1_36,Vea,Vea La Plata II,Supermercado,Buenos Aires,-34.9068,-57.9506
+9_1_398,Vea,Vea 31,Supermercado,Mendoza,-32.9062,-68.7829
+9_1_399,Vea,Vea 32,Supermercado,Mendoza,-33.0865,-68.4619
+9_1_40,Vea,Vea Mitre,Supermercado,Salta,-24.7846,-65.4099
+9_1_400,Vea,Vea 33,Supermercado,Mendoza,-32.9029,-68.8329
+9_1_401,Vea,Vea 35,Supermercado,Mendoza,-32.9122,-68.7858
+9_1_402,Vea,Vea 34,Supermercado,Mendoza,-32.8821,-68.8415
+9_1_408,Vea,Vea 39,Supermercado,San Juan,-31.5235,-68.5365
+9_1_410,Vea,Vea 41,Supermercado,San Juan,-31.5172,-68.5259
+9_1_413,Vea,Vea 44,Supermercado,San Juan,-31.5389,-68.5556
+9_1_415,Vea,Vea 46,Supermercado,San Juan,-31.5358,-68.5142
+9_1_417,Vea,Vea 48,Supermercado,San Juan,-31.5357,-68.5244
+9_1_423,Vea,Vea 36,Supermercado,San Luis,-33.6806,-65.464
+9_1_430,Vea,Vea Funes,Supermercado,Santa Fe,-32.9223,-60.8034
+9_1_432,Vea,Vea San Vicente,Supermercado,Córdoba,-31.4235,-64.1472
+9_1_433,Vea,Vea Cipolletti,Hipermercado,Río Negro,-38.9387,-67.989
+9_1_437,Vea,Vea Ruta 20,Supermercado,Córdoba,-31.4303,-64.219
+9_1_440,Vea,Vea Chacabuco,Supermercado,Córdoba,-31.4225,-64.1823
+9_1_453,Vea,Vea Ruta 9,Supermercado,Córdoba,-31.4333,-64.1568
+9_1_455,Vea,Vea Zanni,Supermercado,Córdoba,-31.4054,-64.2119
+9_1_464,Vea,Vea San Francisco,Supermercado,Córdoba,-31.4288,-62.0894
+9_1_466,Vea,Vea Armada Argentina,Supermercado,Córdoba,-31.4536,-64.2062
+9_1_472,Vea,Vea Ipona,Supermercado,Córdoba,-31.445,-64.1868
+9_1_473,Vea,Vea 24 de Septiembre,Supermercado,Córdoba,-31.4137,-64.1656
+9_1_475,Vea,Vea Arguello,Supermercado,Córdoba,-31.3527,-64.2462
+9_1_478,Vea,Vea Bellville,Supermercado,Córdoba,-32.619,-62.6938
+9_1_479,Vea,Vea Rio Cuarto,Supermercado,Córdoba,-33.1383,-64.3538
+9_1_485,Vea,Vea La Calera,Supermercado,Córdoba,-31.3451,-64.3388
+9_1_503,Vea,Vea Marcos Juarez,Supermercado,Córdoba,-32.6981,-62.1046
+9_1_51,Vea,Vea NECOCHEA,Supermercado,Buenos Aires,-38.5611,-58.7305
+9_1_52,Vea,Vea SAN CLEMENTE,Supermercado,Buenos Aires,-36.3588,-56.7186
+9_1_544,Vea,Vea San Juan,Supermercado,San Juan,-31.5292,-68.5877
+9_1_545,Vea,Vea Tupungato Mza,Supermercado,Mendoza,-33.3636,-69.1436
+9_1_546,Vea,Vea B° Dalvian,Supermercado,Mendoza,-32.876,-68.8836
+9_1_548,Vea,Vea SAN CARLOS,Supermercado,Mendoza,-33.7763,-69.062
+9_1_550,Vea,Vea Catamarca IV,Supermercado,Catamarca,-28.465,-65.8012
+9_1_56,Vea,Vea Luro y Guido,Supermercado,Buenos Aires,-37.9922,-57.5587
+9_1_584,Vea,Vea San Rafael III Mza,Supermercado,Mendoza,-34.6205,-68.3171
+9_1_633,Vea,Vea Pinocho I,Supermercado,Buenos Aires,-34.8955,-57.9801
+9_1_636,Vea,Vea Pinocho IV,Supermercado,Buenos Aires,-34.9362,-57.9344
+9_1_64,Vea,Vea Esteco,Supermercado,Salta,-24.7981,-65.4168
+9_1_640,Vea,Vea Pinocho VIII,Supermercado,Buenos Aires,-34.9168,-57.9562
+9_1_645,Vea,Vea Ciudad de Nieva,Supermercado,Jujuy,-24.1872,-65.3204
+9_1_646,Vea,Vea Guemes 955,Supermercado,Jujuy,-24.1829,-65.3063
+9_1_655,Vea,Vea Ciudad Judicial,Supermercado,Salta,-24.7298,-65.4127
+9_1_656,Vea,Vea Salta Sur,Supermercado,Salta,-24.8414,-65.4331
+9_1_657,Vea,Vea Salta IV,Supermercado,Salta,-24.7767,-65.4148
+9_1_658,Vea,Vea Salta V,Supermercado,Salta,-24.7903,-65.4118
+9_1_660,Vea,Vea Tucumán VI,Supermercado,Tucumán,-26.8328,-65.2282
+9_1_668,Vea,Vea Rojas,Supermercado,Buenos Aires,-34.1961,-60.7339
+9_1_669,Vea,Vea Pergamino,Supermercado,Buenos Aires,-33.8988,-60.5763
+9_1_674,Vea,Vea Resistencia,Supermercado,Chaco,-27.4551,-58.9913
+9_1_677,Vea,Vea Saladillo,Supermercado,Buenos Aires,-35.6388,-59.7762
+9_1_685,Vea,Vea Chajari,Supermercado,Entre Ríos,-30.7625,-57.9939
+9_1_686,Vea,Vea Gualeguaychú,Supermercado,Entre Ríos,-33.0106,-58.5279
+9_1_688,Vea,Vea Goya II,Supermercado,Corrientes,-29.137,-59.2646
+9_1_690,Vea,Vea Rio Tercero II,Supermercado,Córdoba,-32.174,-64.1094
+9_1_691,Vea,Vea Paso de los Libres,Supermercado,Corrientes,-29.7058,-57.0975
+9_1_692,Vea,Vea Lanus,Hipermercado,Buenos Aires,-34.6914,-58.3914
+9_1_696,Vea,Vea San Juan,Hipermercado,CABA,-34.6245,-58.4066
+9_1_697,Vea,Vea Pacheco,Hipermercado,Buenos Aires,-34.4566,-58.6259
+9_1_698,Vea,Vea Monte Grande,Hipermercado,Buenos Aires,-34.8121,-58.4511
+9_1_70,Vea,Vea Yerba Buena,Supermercado,Tucumán,-26.8149,-65.2825
+9_1_700,Vea,Vea Córdoba,Hipermercado,CABA,-34.5836,-58.4486
+9_1_703,Vea,Vea Cañuelas,Supermercado,Buenos Aires,-35.0502,-58.7561
+9_1_704,Vea,Vea Tres Arroyos,Supermercado,Buenos Aires,-38.3773,-60.2727
+9_1_705,Vea,Vea La Rioja II,Supermercado,La Rioja,-29.4018,-66.8531
+9_1_706,Vea,Vea Puerto Madryn,Supermercado,Chubut,-42.7683,-65.039
+9_1_708,Vea,Vea La Rioja,Supermercado,La Rioja,-29.4295,-66.8541
+9_1_71,Vea,Vea Terminal,Supermercado,Tucumán,-26.8373,-65.21
+9_1_711,Vea,Vea Tandil,Supermercado,Buenos Aires,-37.327,-59.1326
+9_1_72,Vea,Vea America y Belgrano Tucuman,Supermercado,Tucumán,-26.8094,-65.2479
+9_1_729,Vea,Vea Ledesma - Jujuy,Supermercado,Jujuy,-23.8137,-64.7934
+9_1_73,Vea,Vea Mate de Luna,Supermercado,Tucumán,-26.8234,-65.2404
+9_1_730,Vea,Vea La Banda,Supermercado,Santiago del Estero,-27.7298,-64.2436
+9_1_731,Vea,"Vea Ituzaingó, Salta",Supermercado,Salta,-24.7939,-65.4142
+9_1_741,Vea,Vea Barracas,Supermercado,CABA,-34.6382,-58.3788
+9_1_752,Vea,Vea Trelew,Supermercado,Chubut,-43.2648,-65.2797
+9_1_767,Vea,Vea Junin,Supermercado,Buenos Aires,-34.5947,-60.9474
+9_1_769,Vea,Vea Catamarca Peatonal,Supermercado,Catamarca,-28.4726,-65.7782
+9_1_8,Vea,Vea Chivilcoy,Supermercado,Buenos Aires,-34.894,-60.0175
+9_1_803,Vea,Vea 50,Supermercado,Mendoza,-34.9666,-67.7
+9_1_815,Vea,Vea 51,Supermercado,San Juan,-31.5667,-68.5323
+9_1_853,Vea,Vea San Luis II,Supermercado,San Luis,-33.2968,-66.339
+9_1_854,Vea,Vea Concordia,Supermercado,Entre Ríos,-31.3844,-58.0212
+9_1_855,Vea,Vea Sexta Sección,Supermercado,Mendoza,-32.8681,-68.8564
+9_1_856,Vea,Vea Las Heras III,Supermercado,Mendoza,-32.8411,-68.8213
+9_1_857,Vea,Vea LA BARRACA,Supermercado,Mendoza,-32.914,-68.8228
+9_1_860,Vea,Vea 52,Supermercado,San Luis,-33.3065,-66.3236
+9_1_868,Vea,Vea 53,Supermercado,Mendoza,-34.6242,-68.3339
+9_1_887,Vea,Vea Sgo.del Estero II,Supermercado,Santiago del Estero,-27.7886,-64.2612
+9_1_901,Vea,Vea Roca ll Centro,Supermercado,Río Negro,-39.0196,-67.586
+9_1_902,Vea,Vea Lainez,Supermercado,La Pampa,-38.9562,-68.0664
+9_1_903,Vea,Vea Stop Monteros,Supermercado,Tucumán,-27.1699,-65.4999
+9_1_904,Vea,Vea Stop Concepción,Supermercado,Tucumán,-27.3503,-65.6008
+9_1_906,Vea,Vea Stop Alberdi,Supermercado,Tucumán,-27.5889,-65.6202
+9_1_910,Vea,Vea Roca-Ruta22,Supermercado,Río Negro,-39.0451,-67.5778
+9_1_912,Vea,Vea Junin II,Supermercado,Buenos Aires,-34.5832,-60.9565
+9_1_914,Vea,Vea Malargüe,Supermercado,Mendoza,-35.4752,-69.5916
+9_1_942,Vea,Vea PV Independencia,Hipermercado,Buenos Aires,-38.0126,-57.5652
+9_1_943,Vea,Vea Paraná,Hipermercado,Entre Ríos,-31.7551,-60.4993
+9_1_944,Vea,Vea Tapiales,Supermercado,Buenos Aires,-34.6926,-58.5016
+9_1_958,Vea,Vea Gobernador del Campo,Supermercado,Tucumán,-26.8229,-65.177
+9_1_980,Vea,Vea Parque San Martín - Salta,Supermercado,Salta,-24.7958,-65.4056
+9_1_983,Vea,Vea Miramar,Supermercado,Buenos Aires,-38.2663,-57.8432
+9_2_1,Disco,Disco San Isidro,Supermercado,Buenos Aires,-34.4713,-58.5179
+9_2_107,Disco,Disco Naón,Supermercado,CABA,-34.5696,-58.473
+9_2_111,Disco,Disco City Bell,Supermercado,Buenos Aires,-34.8819,-58.0544
+9_2_112,Disco,Disco Banfield,Supermercado,Buenos Aires,-34.739,-58.4084
+9_2_12,Disco,Disco Sucre,Supermercado,CABA,-34.5609,-58.452
+9_2_137,Disco,Disco Montevideo,Supermercado,CABA,-34.5964,-58.3902
+9_2_14,Disco,Disco Las Heras,Supermercado,CABA,-34.5608,-58.4499
+9_2_15,Disco,Disco Salguero,Supermercado,CABA,-34.5801,-58.4092
+9_2_152,Disco,Disco Ramos Mejía,Supermercado,Buenos Aires,-34.642,-58.5702
+9_2_154,Disco,Disco Morón II,Supermercado,Buenos Aires,-34.6537,-58.6231
+9_2_156,Disco,Disco Castelar Norte,Supermercado,Buenos Aires,-34.6491,-58.6561
+9_2_163,Disco,Disco Bella Vista,Supermercado,Buenos Aires,-34.5608,-58.6785
+9_2_18,Disco,Disco Quintana,Supermercado,CABA,-34.5897,-58.3886
+9_2_2,Disco,Disco Talcahuano,Supermercado,CABA,-34.5964,-58.3876
+9_2_22,Disco,Disco Santa Fe,Supermercado,CABA,-34.591,-58.4105
+9_2_23,Disco,Disco Alto Palermo,Supermercado,CABA,-34.5868,-58.4109
+9_2_231,Disco,Disco Rawson y Alvear,Supermercado,Buenos Aires,-38.0129,-57.5436
+9_2_233,Disco,Disco Carlos Paz,Supermercado,Córdoba,-31.4188,-64.4951
+9_2_235,Disco,Disco La Horqueta,Supermercado,Buenos Aires,-34.4769,-58.5733
+9_2_237,Disco,Disco Beiró,Supermercado,CABA,-34.6002,-58.504
+9_2_247,Disco,Disco José María Moreno,Supermercado,CABA,-34.6221,-58.4368
+9_2_248,Disco,Disco San Bernardo,Supermercado,Buenos Aires,-36.6882,-56.6835
+9_2_25,Disco,Disco Rodríguez Peña,Supermercado,CABA,-34.593,-58.3926
+9_2_28,Disco,Disco Vélez Sarsfield,Supermercado,Córdoba,-31.4478,-64.199
+9_2_29,Disco,Disco Cerro las Rosas,Supermercado,Córdoba,-31.363,-64.2367
+9_2_3,Disco,Disco Camacua,Supermercado,CABA,-34.6282,-58.4608
+9_2_30,Disco,Disco Rivadavia,Supermercado,CABA,-34.6172,-58.435
+9_2_33,Disco,Disco Alta Córdoba,Supermercado,Córdoba,-31.3981,-64.1825
+9_2_35,Disco,Disco Uriburu,Supermercado,CABA,-34.5938,-58.3989
+9_2_37,Disco,Disco Adrogué,Supermercado,Buenos Aires,-34.7993,-58.4053
+9_2_38,Disco,Disco Arcos,Supermercado,CABA,-34.5622,-58.4546
+9_2_39,Disco,Disco Peña,Supermercado,CABA,-34.5859,-58.4074
+9_2_4,Disco,Disco Vicente López,Supermercado,Buenos Aires,-34.5201,-58.4877
+9_2_42,Disco,Disco La Plata I,Supermercado,Buenos Aires,-34.9349,-57.9757
+9_2_435,Disco,Disco Los 33,Supermercado,Córdoba,-31.4252,-64.1848
+9_2_436,Disco,Disco Cerro II,Supermercado,Córdoba,-31.3806,-64.2229
+9_2_439,Disco,Disco Colón,Supermercado,Córdoba,-31.4108,-64.1927
+9_2_441,Disco,Disco Estrada,Supermercado,Córdoba,-31.4277,-64.188
+9_2_448,Disco,Disco Carcano,Supermercado,Córdoba,-31.4367,-64.5007
+9_2_449,Disco,Disco Acceso,Supermercado,Córdoba,-31.413,-64.4852
+9_2_45,Disco,Disco Gesell Boulevard,Supermercado,Buenos Aires,-37.2611,-56.9869
+9_2_450,Disco,Disco Cosquín,Supermercado,Córdoba,-31.2445,-64.4659
+9_2_452,Disco,Disco La Falda,Supermercado,Córdoba,-31.093,-64.483
+9_2_456,Disco,Disco Jesús María,Supermercado,Córdoba,-30.9804,-64.096
+9_2_460,Disco,Disco Ricchieri,Supermercado,Córdoba,-31.4507,-64.1767
+9_2_468,Disco,Disco Recta Martinolli,Supermercado,Córdoba,-31.367,-64.2194
+9_2_48,Disco,Disco Gascón,Supermercado,CABA,-34.6033,-58.4264
+9_2_49,Disco,Disco Pinamar,Supermercado,Buenos Aires,-37.1082,-56.8731
+9_2_50,Disco,Disco Gesell Central,Supermercado,Buenos Aires,-37.2636,-56.9766
+9_2_54,Disco,Disco Elcano,Supermercado,CABA,-34.5729,-58.4614
+9_2_55,Disco,Disco J. B. Justo,Supermercado,Buenos Aires,-38.0244,-57.5659
+9_2_57,Disco,Disco San Luis,Supermercado,Buenos Aires,-38.0016,-57.5502
+9_2_58,Disco,Disco Constitución,Supermercado,Buenos Aires,-37.96,-57.5668
+9_2_583,Disco,Disco - Villa Allende,Supermercado,Córdoba,-31.3015,-64.2856
+9_2_59,Disco,Disco Alberti,Supermercado,Buenos Aires,-38.0072,-57.5514
+9_2_60,Disco,Disco Córdoba Shopping,Supermercado,Córdoba,-31.3802,-64.2147
+9_2_61,Disco,Disco Tortuguitas,Supermercado,Buenos Aires,-34.4463,-58.745
+9_2_62,Disco,Disco La Plata III,Supermercado,Buenos Aires,-34.9154,-57.9421
+9_2_701,Disco,Disco Directorio,Supermercado,CABA,-34.6295,-58.4478
+9_2_709,Disco,Disco Recta Martinolli ll,Supermercado,Córdoba,-31.3468,-64.2805
+9_2_725,Disco,Disco Alta Gracia,Supermercado,Córdoba,-31.6512,-64.4269
+9_2_740,Disco,Disco Canning,Supermercado,Buenos Aires,-34.8546,-58.5047
+9_2_842,Disco,Disco Cruz del Eje,Supermercado,Córdoba,-30.7249,-64.8005
+9_2_843,Disco,Disco Rio Ceballos,Supermercado,Córdoba,-31.1833,-64.3333
+9_2_9,Disco,Disco Lomas de Zamora,Supermercado,Buenos Aires,-34.7638,-58.3995
+9_2_916,Disco,Disco Gorostiaga,Supermercado,CABA,-34.5655,-58.4368
+9_2_953,Disco,Disco Venado Tuerto,Supermercado,Santa Fe,-33.7666,-61.9666
+9_2_954,Disco,Disco Alta Gracia II,Supermercado,Córdoba,-31.6559,-64.4099
+9_2_977,Disco,Disco Cuba,Supermercado,CABA,-34.5646,-58.4517
+9_3_121,Jumbo,Jumbo Las Heras,Supermercado,CABA,-34.6147,-58.435
+9_3_138,Jumbo,Jumbo Nordelta,Hipermercado,Buenos Aires,-34.4005,-58.6548
+9_3_451,Jumbo,Jumbo Nuevo Centro,Supermercado,Córdoba,-31.4126,-64.1616
+9_3_5034,Jumbo,Jumbo Quilmes II,Supermercado,Buenos Aires,-34.7282,-58.251
+9_3_5201,Jumbo,Jumbo Escalada,Hipermercado,CABA,-34.6746,-58.4628
+9_3_5202,Jumbo,Jumbo Martínez,Hipermercado,Buenos Aires,-34.5084,-58.5227
+9_3_5204,Jumbo,Jumbo Lomas,Hipermercado,Buenos Aires,-34.7932,-58.414
+9_3_5205,Jumbo,Jumbo San Martín,Hipermercado,Buenos Aires,-34.5633,-58.5585
+9_3_5206,Jumbo,Jumbo Palermo,Hipermercado,CABA,-34.5745,-58.4272
+9_3_5207,Jumbo,Jumbo Quilmes,Hipermercado,Buenos Aires,-34.7588,-58.2805
+9_3_5208,Jumbo,Jumbo Morón,Hipermercado,Buenos Aires,-34.6338,-58.6285
+9_3_5211,Jumbo,Jumbo Pilar,Hipermercado,Buenos Aires,-34.4427,-58.8731
+9_3_5213,Jumbo,Jumbo Madero Harbour,Hipermercado,CABA,-34.6192,-58.3615
+9_3_5214,Jumbo,Jumbo Escobar,Hipermercado,Buenos Aires,-34.3578,-58.7951
+9_3_5216,Jumbo,Jumbo Neuquén,Hipermercado,La Pampa,-38.9596,-68.0925
+9_3_5218,Jumbo,Jumbo Rosario,Hipermercado,Santa Fe,-32.9094,-60.685
+9_3_5222,Jumbo,Jumbo Mendoza,Hipermercado,Mendoza,-32.9169,-68.838
+9_3_5225,Jumbo,Jumbo Vista Pueblo,Hipermercado,Mendoza,-32.9798,-68.8582
+9_3_5227,Jumbo,Jumbo Tucuman,Hipermercado,Tucumán,-26.822,-65.2615
+9_3_5231,Jumbo,Jumbo Almagro,Hipermercado,CABA,-34.6,-58.4312
+9_3_5251,Jumbo,Jumbo Salta,Hipermercado,Salta,-24.7726,-65.4129
+9_3_5259,Jumbo,Jumbo Tronador,Hipermercado,CABA,-34.5847,-58.4685
+9_3_5260,Jumbo,Jumbo Acoyte,Hipermercado,CABA,-34.6106,-58.4401
+9_3_5263,Jumbo,Jumbo Juan B. Justo,Hipermercado,CABA,-34.6096,-58.4675
+9_3_5275,Jumbo,Jumbo La Palmera,Supermercado,Buenos Aires,-34.5081,-58.4771
+9_3_5276,Jumbo,Jumbo Arenales,Supermercado,CABA,-34.5941,-58.3791
+9_3_5277,Jumbo,Jumbo-Comodoro,Hipermercado,Chubut,-45.8733,-67.4935
+9_3_5626,Jumbo,Jumbo Pacheco Novo,Hipermercado,Buenos Aires,-34.4745,-58.6257
+9_3_5961,Jumbo,Jumbo Av. Santa Fé,Supermercado,CABA,-34.5772,-58.43
+9_3_628,Jumbo,Jumbo San Fernando,Supermercado,Buenos Aires,-34.4469,-58.5457
+9_3_662,Jumbo,Jumbo Paseo del Pilar,Supermercado,Buenos Aires,-34.436,-58.808

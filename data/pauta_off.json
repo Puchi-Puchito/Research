@@ -1,0 +1,235 @@
+{
+ "actualizado": "2026-10-21",
+ "zonas": [
+  {
+   "id": "obelisco",
+   "zona": "Obelisco",
+   "operador": "Atacama",
+   "formato": "LED gran formato (~200 m²)",
+   "lat": -34.60361,
+   "lon": -58.38167,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://mercado.com.ar/negocios/atacama-redefine-la-experiencia-urbana-en-el-obelisco-con-pantallas-digitales-de-alta-tecnologia"
+  },
+  {
+   "id": "plazaitalia",
+   "zona": "Plaza Italia y Sarmiento · subte D",
+   "operador": "Taggify (marketplace DOOH)",
+   "formato": "DOOH y pantallas de andén",
+   "lat": -34.581,
+   "lon": -58.4208,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://taggify.net/Screens/Argentina"
+  },
+  {
+   "id": "aeroparque",
+   "zona": "Aeroparque",
+   "operador": "Aeropuertos Argentina + Beeyond Media",
+   "formato": "30 pantallas DOOH programáticas",
+   "lat": -34.55889,
+   "lon": -58.41639,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.itsitio.com/ar/casos-de-estudio/aeropuertos-argentina-cuenta-con-la-ultima-tecnologia-en-las-pantallas-de-sus-aeropuertos/"
+  },
+  {
+   "id": "santafe",
+   "zona": "Av. Santa Fe y Coronel Díaz",
+   "operador": "Outmark",
+   "formato": "MUPI digital ($800.000/pantalla/mes s/IVA)",
+   "lat": -34.5884,
+   "lon": -58.4115,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://outmark.com.ar/mupis"
+  },
+  {
+   "id": "corrientes",
+   "zona": "Av. Corrientes y Riobamba",
+   "operador": "Outmark",
+   "formato": "MUPI digital",
+   "lat": -34.6045,
+   "lon": -58.3927,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://outmark.com.ar/mupis"
+  },
+  {
+   "id": "libsarmiento",
+   "zona": "Av. del Libertador y Av. Sarmiento",
+   "operador": "Sarmiento",
+   "formato": "Carteleras, LED, PPL digitales",
+   "lat": -34.5735,
+   "lon": -58.418,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://sarmiento.net"
+  },
+  {
+   "id": "libnunez",
+   "zona": "Av. del Libertador (Núñez)",
+   "operador": "Outmark · Delfino Magnus",
+   "formato": "MUPIs y soportes sobre el corredor (confirmar ubicación)",
+   "lat": -34.547,
+   "lon": -58.453,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://delfinomagnus.com"
+  },
+  {
+   "id": "gpazlugones",
+   "zona": "Gral. Paz y Lugones",
+   "operador": "NVOOH",
+   "formato": "Monumentales y LED",
+   "lat": -34.537,
+   "lon": -58.462,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.nvooh.com.ar/buenos-aires"
+  },
+  {
+   "id": "gpazconst",
+   "zona": "Gral. Paz y Constituyentes",
+   "operador": "NVOOH · Delfino Magnus",
+   "formato": "Monumentales y LED",
+   "lat": -34.561,
+   "lon": -58.503,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.nvooh.com.ar/buenos-aires"
+  },
+  {
+   "id": "panamarquez",
+   "zona": "Panamericana (km 13–25)",
+   "operador": "Delfino Magnus · NVOOH",
+   "formato": "Espectaculares, monocolumnas, LED",
+   "lat": -34.493,
+   "lon": -58.532,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://delfinomagnus.com"
+  },
+  {
+   "id": "panam31",
+   "zona": "Panamericana km 31",
+   "operador": "Delfino Magnus",
+   "formato": "LED, espectaculares y monocolumnas",
+   "lat": -34.485,
+   "lon": -58.66,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://delfinomagnus.com"
+  },
+  {
+   "id": "estsanisidro",
+   "zona": "Estación San Isidro (Mitre)",
+   "operador": "Concesionario del ramal",
+   "formato": "Andenes y accesos (a confirmar)",
+   "lat": -34.4717,
+   "lon": -58.5095,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.c5n.com/ratingcero/lollapalooza-argentina-2026-como-llegar-servicios-especiales-transporte-y-accesos-al-hipodromo-n232166"
+  },
+  {
+   "id": "nordelta",
+   "zona": "Accesos a Nordelta",
+   "operador": "Outmark",
+   "formato": "7 MUPIs digitales",
+   "lat": -34.405,
+   "lon": -58.645,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://outmark.com.ar/mupis"
+  },
+  {
+   "id": "carlospaz",
+   "zona": "Villa Carlos Paz",
+   "operador": "7Sentidos / Colosal · Sarmiento",
+   "formato": "Grandes formatos LED y carteleras",
+   "lat": -31.424,
+   "lon": -64.497,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://infonegocios.info/nota-principal/7sentidos-colosal-multiled-stampa-el-grupo-cordobes-que-opera-mas-de-200-dispositivos-publicitarios"
+  },
+  {
+   "id": "rn38",
+   "zona": "Corredor RN38 Carlos Paz–Cosquín",
+   "operador": "7Sentidos (LED móvil)",
+   "formato": "Camión LED en ruta",
+   "lat": -31.35,
+   "lon": -64.48,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://infonegocios.info/nota-principal/7sentidos-colosal-multiled-stampa-el-grupo-cordobes-que-opera-mas-de-200-dispositivos-publicitarios"
+  },
+  {
+   "id": "aepcba",
+   "zona": "Aeropuerto de Córdoba",
+   "operador": "Aeropuertos Argentina",
+   "formato": "Pantallas (cantidad a confirmar)",
+   "lat": -31.3236,
+   "lon": -64.208,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.itsitio.com/ar/casos-de-estudio/aeropuertos-argentina-cuenta-con-la-ultima-tecnologia-en-las-pantallas-de-sus-aeropuertos/"
+  },
+  {
+   "id": "mdp",
+   "zona": "Mar del Plata centro y costa",
+   "operador": "UTE OSP / Ed. San Martín / Lumisan · Sarmiento",
+   "formato": "Mobiliario (3.918 espacios), tótems LED, carteleras",
+   "lat": -38.0,
+   "lon": -57.55,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.lacapitalmdp.com/aaprobaron-la-adjudicacion-para-la-explotacion-del-mobiliario-urbano/"
+  },
+  {
+   "id": "pinamar",
+   "zona": "Pinamar",
+   "operador": "Sarmiento",
+   "formato": "Backlights y PPL digitales",
+   "lat": -37.1094,
+   "lon": -56.8517,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://sarmiento.net"
+  },
+  {
+   "id": "gesell",
+   "zona": "Villa Gesell",
+   "operador": "Sarmiento",
+   "formato": "LED gran formato",
+   "lat": -37.263,
+   "lon": -56.973,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://sarmiento.net"
+  },
+  {
+   "id": "mendoza",
+   "zona": "Mendoza centro",
+   "operador": "Sarmiento",
+   "formato": "Carteleras, megaformatos, LED",
+   "lat": -32.8895,
+   "lon": -68.8458,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://sarmiento.net"
+  },
+  {
+   "id": "aepmza",
+   "zona": "Aeropuerto de Mendoza",
+   "operador": "Aeropuertos Argentina",
+   "formato": "Pantallas (cantidad a confirmar)",
+   "lat": -32.8317,
+   "lon": -68.7929,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.itsitio.com/ar/casos-de-estudio/aeropuertos-argentina-cuenta-con-la-ultima-tecnologia-en-las-pantallas-de-sus-aeropuertos/"
+  },
+  {
+   "id": "rosario",
+   "zona": "Rosario",
+   "operador": "Sarmiento",
+   "formato": "Carteleras, medianeras, LED",
+   "lat": -32.9468,
+   "lon": -60.6393,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://sarmiento.net"
+  },
+  {
+   "id": "rn9",
+   "zona": "Corredor RN9",
+   "operador": "Cartelería de ruta",
+   "formato": "Carteles de ruta (relevar)",
+   "lat": -33.42,
+   "lon": -60.1,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.expoagro.com.ar/evento/expoagro-2027/"
+  }
+ ]
+}

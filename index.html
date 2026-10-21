@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mapa de eventos y pauta OFF</title>
+<meta name="description" content="Eventos en Argentina con su convocatoria publicada, zonas de vía pública cercanas y supermercados de Cencosud (Jumbo, Disco, Vea).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>Eventos, pauta OFF y Cencosud</h1>
+      <div class="sub">Convocatoria publicada por evento, zonas de vía pública cercanas y supermercados Jumbo, Disco y Vea · datos al <span id="asof"></span></div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+  <div class="main">
+    <aside>
+      <div class="controls">
+        <div class="lbl">Rubro</div>
+        <div class="chips" id="rubros"></div>
+        <div class="row">
+          <button class="chip" id="lyr-ooh" aria-pressed="true" type="button"><span class="sw ooh"></span>Pauta OFF</button>
+          <button class="chip" id="lyr-cen" aria-pressed="true" type="button"><span class="sw cen"></span>Cencosud</button>
+        </div>
+        <div class="row"><span class="lbl">Ver</span>
+          <button class="btn" id="v-amba" type="button">AMBA</button>
+          <button class="btn" id="v-ar" type="button">Argentina</button>
+        </div>
+      </div>
+      <div class="list" id="list" role="list"></div>
+    </aside>
+    <div class="mapwrap">
+      <div id="map" aria-label="Mapa de sedes, zonas de pauta y supermercados"></div>
+      <div class="legend">
+        <div><i class="lg-ev"></i>Sede del evento (color = rubro)</div>
+        <div><i class="lg-ooh"></i>Zona de pauta OFF (referencia, no sitio exacto)</div>
+        <div><i class="lg-cen"></i>Jumbo, Disco o Vea (SEPA, abr-2026)</div>
+        <div class="note" id="basenote">Cargando mapa…</div>
+      </div>
+      <div class="card" id="card" hidden></div>
+    </div>
+  </div>
+</div>
+<script src="config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
