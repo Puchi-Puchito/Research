@@ -13,7 +13,7 @@ Datos al 21/10/2026.
 
 ## Cómo verlo
 
-Publicado con GitHub Pages: <https://puchi-puchito.github.io/research/>
+Publicado con GitHub Pages: <https://puchi-puchito.github.io/Research/>
 
 Para probarlo en tu computadora hace falta un servidor local (el mapa lee los archivos de `data/`):
 
