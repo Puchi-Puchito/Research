@@ -5,11 +5,13 @@ Mapa interactivo con eventos masivos de Argentina, las zonas de vía pública (O
 Para cada evento muestra:
 
 - **Convocatoria publicada** de la última edición, con la unidad exacta de la fuente (personas, visitantes, espectadores, admisiones) y un nivel de confianza.
-- **Próxima edición** y sede.
+- **Próxima edición**, sede y trimestre (con filtro por trimestre; las fechas estimadas se marcan como tales).
 - **Zonas de pauta OFF** cercanas, con operador y formato.
 - **Sucursales de Cencosud** dentro de un radio de 3 km (AMBA) o 15 km (interior), con su distancia en línea recta.
 
-Datos al 21/10/2026.
+La capa **Zonas de geolocalización** (apagada por defecto) dibuja el radio de cada evento visible y un círculo de 1 km alrededor de cada sucursal.
+
+Datos al 22/10/2026.
 
 ## Cómo verlo
 
@@ -36,8 +38,8 @@ El mapa usa Google Maps cuando hay una clave configurada en `config.js`. Si no h
 
 | Archivo | Contenido |
 | --- | --- |
-| `data/eventos.json` / `.csv` | 18 eventos y frentes: sede, coordenadas, convocatoria, unidad, confianza, próxima edición, fuente |
-| `data/pauta_off.json` / `.csv` | 23 zonas de vía pública: operador, formato, ubicación de referencia, fuente |
+| `data/eventos.json` / `.csv` | 20 eventos y frentes: sede, coordenadas, convocatoria, unidad, confianza, próxima edición, inicio (ISO) y si la fecha es estimada, fuente |
+| `data/pauta_off.json` / `.csv` | 25 zonas de vía pública: operador, formato, ubicación de referencia, fuente |
 | `data/cencosud.json` / `.csv` | 254 sucursales Jumbo, Disco y Vea con coordenadas |
 
 Notas de método:

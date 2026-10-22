@@ -107,6 +107,7 @@ a{color:var(--focus)}
 
 .sw.ooh{background:var(--ooh);border-radius:1px;transform:rotate(45deg)}
 .sw.cen{background:var(--cen)}
+.sw.geo,.lg-geo{width:10px;height:10px;border-radius:50%;background:color-mix(in srgb,var(--cen) 18%,transparent);border:1px solid var(--cen)}
 .gm-style .gm-style-iw{font-family:var(--f-body)}
 
 /* Vista previa al pasar el mouse */

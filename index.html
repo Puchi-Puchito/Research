@@ -23,9 +23,12 @@
       <div class="controls">
         <div class="lbl">Rubro</div>
         <div class="chips" id="rubros"></div>
+        <div class="lbl">Trimestre</div>
+        <div class="chips" id="tris"></div>
         <div class="row">
           <button class="chip" id="lyr-ooh" aria-pressed="true" type="button"><span class="sw ooh"></span>Pauta OFF</button>
           <button class="chip" id="lyr-cen" aria-pressed="true" type="button"><span class="sw cen"></span>Cencosud</button>
+          <button class="chip" id="lyr-geo" aria-pressed="false" type="button"><span class="sw geo"></span>Zonas de geolocalización</button>
         </div>
         <div class="row"><span class="lbl">Ver</span>
           <button class="btn" id="v-amba" type="button">AMBA</button>
@@ -40,6 +43,7 @@
         <div><i class="lg-ev"></i>Sede del evento (color = rubro)</div>
         <div><i class="lg-ooh"></i>Zona de pauta OFF (referencia, no sitio exacto)</div>
         <div><i class="lg-cen"></i>Jumbo, Disco o Vea (SEPA, abr-2026)</div>
+        <div id="lg-geo" hidden><i class="lg-geo"></i>Zona de geolocalización: radio del evento y 1 km por sucursal</div>
         <div class="note" id="basenote">Cargando mapa…</div>
       </div>
       <div class="card" id="card" hidden></div>

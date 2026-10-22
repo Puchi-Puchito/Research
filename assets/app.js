@@ -65,8 +65,9 @@
       center: { lat: -34.6, lng: -58.45 }, zoom: 11, mapTypeControl: false, streetViewControl: false,
       fullscreenControl: true, clickableIcons: false, styles: isDark() ? GSTYLE_DARK : GSTYLE_LIGHT,
     });
-    const layers = { ev: [], ooh: [], cen: [] };
+    const layers = { ev: [], ooh: [], cen: [], geoEv: [], geoCen: [] };
     let hl = [];
+    const geoCircle = (lat, lon, km, col, op, w) => new g.Circle({ center: { lat, lng: lon }, radius: km * 1000, strokeColor: col, strokeOpacity: 0.55, strokeWeight: w, fillColor: col, fillOpacity: op, clickable: false, zIndex: 1 });
     const hover = new g.InfoWindow({ disableAutoPan: true, headerDisabled: true });
     let hoverTimer = null;
     const hoverable = (m, html, clickShows, lift) => {
@@ -92,6 +93,7 @@
         hoverable(m, PV.event(e), false, 12);
         m.addListener("click", () => { hover.close(); onClick(); });
         layers.ev.push({ id: e.id, m });
+        layers.geoEv.push({ id: e.id, c: geoCircle(e.lat, e.lon, e.radio_km, RCOL(e.rubro), 0.07, 1) });
       },
       addOoh(o) {
         const m = new g.Marker({
@@ -108,9 +110,14 @@
         });
         hoverable(m, PV.store(s), true, 6);
         layers.cen.push({ m });
+        layers.geoCen.push({ c: geoCircle(s.lat, s.lon, 1, css("--cen"), 0.08, 0.8) });
       },
       showEvents(ids) { layers.ev.forEach((x) => x.m.setMap(ids.has(x.id) ? map : null)); },
       showLayer(name, on) { layers[name].forEach((x) => x.m.setMap(on ? map : null)); },
+      showGeo(ids, stores) {
+        layers.geoEv.forEach((x) => x.c.setMap(ids.has(x.id) ? map : null));
+        layers.geoCen.forEach((x) => x.c.setMap(stores ? map : null));
+      },
       highlight(e, oohs) {
         api.clearHighlight();
         hl.push(new g.Circle({ map, center: { lat: e.lat, lng: e.lon }, radius: e.radio_km * 1000, strokeColor: RCOL(e.rubro), strokeOpacity: 0.9, strokeWeight: 1.5, fillColor: RCOL(e.rubro), fillOpacity: 0.06, clickable: false }));
@@ -152,8 +159,10 @@
       }).addTo(map);
     };
     setTiles();
-    const groups = { ev: L.layerGroup().addTo(map), ooh: L.layerGroup().addTo(map), cen: L.layerGroup().addTo(map) };
-    const evm = {};
+    map.createPane("geo").style.zIndex = 350; // debajo de los marcadores (overlayPane = 400)
+    const groups = { ev: L.layerGroup().addTo(map), ooh: L.layerGroup().addTo(map), cen: L.layerGroup().addTo(map), geoEv: L.layerGroup(), geoCen: L.layerGroup() };
+    const evm = {}, geom = {};
+    const geoCircle = (lat, lon, km, col, op, w) => L.circle([lat, lon], { pane: "geo", radius: km * 1000, color: col, opacity: 0.55, weight: w, fillColor: col, fillOpacity: op, interactive: false });
     const hl = L.layerGroup().addTo(map);
     const api = {
       kind: "leaflet",
@@ -161,6 +170,7 @@
         const m = L.circleMarker([e.lat, e.lon], { radius: 8, weight: 2.5, color: "#fff", fillColor: RCOL(e.rubro), fillOpacity: 1 });
         m.bindTooltip(PV.event(e), { direction: "top", offset: [0, -8], className: "pv-tt" });
         m.on("click", onClick); evm[e.id] = m; groups.ev.addLayer(m);
+        geom[e.id] = geoCircle(e.lat, e.lon, e.radio_km, RCOL(e.rubro), 0.07, 1);
       },
       addOoh(o) {
         const m = L.marker([o.lat, o.lon], { icon: L.divIcon({ className: "", html: '<div class="mk-ooh"></div>', iconSize: [12, 12], iconAnchor: [6, 6] }), keyboard: false });
@@ -171,9 +181,15 @@
         const m = L.circleMarker([s.lat, s.lon], { radius: 3.5, weight: 1, color: "#fff", fillColor: css("--cen"), fillOpacity: 0.95 });
         m.bindTooltip(PV.store(s), { direction: "top", offset: [0, -4], className: "pv-tt" });
         groups.cen.addLayer(m);
+        groups.geoCen.addLayer(geoCircle(s.lat, s.lon, 1, css("--cen"), 0.08, 0.8));
       },
       showEvents(ids) { groups.ev.clearLayers(); Object.entries(evm).forEach(([id, m]) => ids.has(id) && groups.ev.addLayer(m)); },
       showLayer(name, on) { on ? groups[name].addTo(map) : map.removeLayer(groups[name]); },
+      showGeo(ids, stores) {
+        groups.geoEv.clearLayers(); Object.entries(geom).forEach(([id, c]) => ids.has(id) && groups.geoEv.addLayer(c));
+        groups.geoEv.addTo(map);
+        api.showLayer("geoCen", stores);
+      },
       highlight(e, oohs) {
         hl.clearLayers();
         L.circle([e.lat, e.lon], { radius: e.radio_km * 1000, color: RCOL(e.rubro), weight: 1.5, dashArray: "4 4", fillOpacity: 0.06, interactive: false }).addTo(hl);
@@ -188,7 +204,10 @@
   }
 
   /* ---------------- App ---------------- */
-  const state = { rubros: null, ooh: true, cen: true, sel: null };
+  const state = { rubros: null, tris: null, ooh: true, cen: true, geo: false, sel: null };
+  // Trimestre derivado de `inicio` (ISO); sin fecha → "sin"
+  const triOf = (e) => (e.inicio ? e.inicio.slice(0, 4) + "-" + Math.ceil(+e.inicio.slice(5, 7) / 3) : "sin");
+  const triName = (k) => (k === "sin" ? "Sin fecha" : `${k.slice(5)}.${/[13]$/.test(k) ? "er" : "º"} trim. ${k.slice(0, 4)}`);
   let D, M;
   const $ = (id) => document.getElementById(id);
   const card = $("card"), list = $("list");
@@ -203,16 +222,21 @@
     return [[Math.min(...lats), Math.min(...lons)], [Math.max(...lats), Math.max(...lons)]];
   }
 
-  function visible(e) { return state.rubros.has(e.rubro); }
+  function visible(e) { return state.rubros.has(e.rubro) && state.tris.has(triOf(e)); }
 
   function render() {
     [...$("rubros").children].forEach((b) => b.setAttribute("aria-pressed", state.rubros.has(b.dataset.r)));
+    [...$("tris").children].forEach((b) => b.setAttribute("aria-pressed", state.tris.has(b.dataset.t)));
     $("lyr-ooh").setAttribute("aria-pressed", state.ooh);
     $("lyr-cen").setAttribute("aria-pressed", state.cen);
+    $("lyr-geo").setAttribute("aria-pressed", state.geo);
+    $("lg-geo").hidden = !state.geo;
     M.showLayer("ooh", state.ooh);
     M.showLayer("cen", state.cen);
     const vis = D.eventos.filter(visible);
-    M.showEvents(new Set(vis.map((e) => e.id)));
+    const visIds = new Set(vis.map((e) => e.id));
+    M.showEvents(visIds);
+    M.showGeo(state.geo ? visIds : new Set(), state.geo && state.cen);
     const order = Object.keys(D.rubros);
     vis.sort((a, b) => order.indexOf(a.rubro) - order.indexOf(b.rubro));
     list.innerHTML = "";
@@ -224,9 +248,9 @@
       b.onclick = () => { select(e.id, true); if (window.innerWidth <= 820) document.querySelector(".mapwrap").scrollIntoView({ behavior: "smooth" }); };
       list.appendChild(b);
     });
-    if (!vis.length) list.innerHTML = '<p style="padding:16px;color:var(--muted)">Ningún evento coincide con los filtros. Activá otro rubro.</p>';
+    if (!vis.length) list.innerHTML = '<p style="padding:16px;color:var(--muted)">Ningún evento coincide con los filtros. Activá otro rubro o trimestre.</p>';
     if (state.sel && !vis.find((e) => e.id === state.sel)) closeCard();
-    try { localStorage.setItem("evmap", JSON.stringify({ ooh: state.ooh, cen: state.cen, rubros: [...state.rubros] })); } catch (_) {}
+    try { localStorage.setItem("evmap", JSON.stringify({ ooh: state.ooh, cen: state.cen, geo: state.geo, rubros: [...state.rubros], tris: [...state.tris] })); } catch (_) {}
   }
 
   function select(id, fit) {
@@ -242,7 +266,7 @@
       <header><div class="eyebrow" style="color:${RCOL(e.rubro)}">${esc(e.rubro_nombre)}</div><h2>${esc(e.nombre)}</h2><div class="sub">${esc(e.sede)} · ubicación ${esc(e.precision)}</div></header>
       <div class="uni"><b>${esc(e.convocatoria)}</b><span class="pill c-${esc(e.confianza)}">Confianza ${esc(e.confianza.toLowerCase())}</span></div>
       <div class="unit">${esc(e.unidad)} · <a href="${esc(e.fuente)}" target="_blank" rel="noopener">fuente</a></div>
-      <dl class="kv"><dt>Próxima edición</dt><dd>${esc(e.proxima_edicion)}</dd></dl>
+      <dl class="kv"><dt>Próxima edición</dt><dd>${esc(e.proxima_edicion)}</dd><dt>Trimestre</dt><dd>${esc(triName(triOf(e)))}${e.fecha_estimada ? " · fecha estimada" : ""}</dd></dl>
       <div class="sec"><h3><span class="mk-ooh" style="width:10px;height:10px"></span>Pauta OFF cercana</h3>${oohs.length ? "<ul>" + oohs.map((o) => `<li><span>${esc(o.zona)}<small>${esc(o.operador)} · ${esc(o.formato)}</small></span><a class="d" href="${esc(o.fuente)}" target="_blank" rel="noopener">fuente</a></li>`).join("") + "</ul>" : "<p>Sin zonas de vía pública relevadas.</p>"}${e.nota ? `<p style="margin-top:8px">${esc(e.nota)}</p>` : ""}</div>
       <div class="sec"><h3><span class="lg-cen" style="display:inline-block"></span>Cencosud ${inR.length ? `· ${inR.length} en ${e.radio_km} km` : `· ninguno en ${e.radio_km} km; el más cercano`}</h3><ul>${shown.map((x) => `<li><span>${esc(x.s.nombre)}<small>${esc(x.s.tipo)}</small></span><span class="d">${fmtKm(x.d)}</span></li>`).join("")}</ul></div>`;
     card.hidden = false;
@@ -258,9 +282,16 @@
     D = { rubros: ev.rubros, eventos: ev.eventos, zonas: oo.zonas, sucursales: ce.sucursales };
     $("asof").textContent = ev.actualizado.split("-").reverse().join("/");
     state.rubros = new Set(Object.keys(D.rubros));
+    const tris = [...new Set(D.eventos.map(triOf))].sort((a, b) => (a === "sin") - (b === "sin") || a.localeCompare(b));
+    state.tris = new Set(tris);
     try {
       const s = JSON.parse(localStorage.getItem("evmap") || "null");
-      if (s) { state.ooh = s.ooh !== false; state.cen = s.cen !== false; if (Array.isArray(s.rubros) && s.rubros.length) state.rubros = new Set(s.rubros); }
+      if (s) {
+        state.ooh = s.ooh !== false; state.cen = s.cen !== false; state.geo = s.geo === true;
+        if (Array.isArray(s.rubros) && s.rubros.length) state.rubros = new Set(s.rubros);
+        const t = Array.isArray(s.tris) ? s.tris.filter((k) => tris.includes(k)) : [];
+        if (t.length) state.tris = new Set(t);
+      }
     } catch (_) {}
     $("stats").innerHTML = [[D.eventos.length, "eventos"], [D.zonas.length, "zonas de pauta OFF"], [D.sucursales.length, "sucursales Cencosud"]]
       .map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join("");
@@ -288,8 +319,16 @@
       b.onclick = () => { state.rubros.has(k) && state.rubros.size > 1 ? state.rubros.delete(k) : state.rubros.add(k); render(); };
       $("rubros").appendChild(b);
     });
+    tris.forEach((k) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.dataset.t = k;
+      b.textContent = `${triName(k)} (${D.eventos.filter((e) => triOf(e) === k).length})`;
+      b.onclick = () => { state.tris.has(k) && state.tris.size > 1 ? state.tris.delete(k) : state.tris.add(k); render(); };
+      $("tris").appendChild(b);
+    });
     $("lyr-ooh").onclick = () => { state.ooh = !state.ooh; render(); };
     $("lyr-cen").onclick = () => { state.cen = !state.cen; render(); };
+    $("lyr-geo").onclick = () => { state.geo = !state.geo; render(); };
     $("v-amba").onclick = () => M.fit(AMBA, padRight());
     $("v-ar").onclick = () => M.fit(AR, padRight());
     document.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && !card.hidden) closeCard(); });

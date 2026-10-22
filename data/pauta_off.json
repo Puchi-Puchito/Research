@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21",
+ "actualizado": "2026-10-22",
  "zonas": [
   {
    "id": "obelisco",
@@ -230,6 +230,26 @@
    "lon": -60.1,
    "precision": "zona de referencia, no sitio exacto",
    "fuente": "https://www.expoagro.com.ar/evento/expoagro-2027/"
+  },
+  {
+   "id": "cba",
+   "zona": "Córdoba capital",
+   "operador": "7Sentidos / Colosal",
+   "formato": "Más de 40 pantallas LED (7Sentidos); 25 monocolumnas (Colosal)",
+   "lat": -31.4167,
+   "lon": -64.1833,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://infonegocios.info/nota-principal/7sentidos-colosal-multiled-stampa-el-grupo-cordobes-que-opera-mas-de-200-dispositivos-publicitarios"
+  },
+  {
+   "id": "rn9norte",
+   "zona": "Corredor RN9 norte Córdoba–Jesús María",
+   "operador": "Cartelería de ruta",
+   "formato": "Carteles de ruta (relevar)",
+   "lat": -31.17,
+   "lon": -64.12,
+   "precision": "zona de referencia, no sitio exacto",
+   "fuente": "https://www.perfil.com/noticias/cordoba/jesus-maria-2027-cuando-es-quienes-actuan-y-cuando-salen-a-la-venta-las-entradas.phtml"
   }
  ]
 }
