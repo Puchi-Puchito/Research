@@ -367,6 +367,31 @@
    "nota": ""
   },
   {
+   "id": "bafweek",
+   "nombre": "BAFWEEK Otoño-Invierno 2027",
+   "rubro": "diseno",
+   "rubro_nombre": "Diseño, hogar y cultura",
+   "sede": "La Rural",
+   "lat": -34.5792,
+   "lon": -58.4196,
+   "precision": "aproximada (±300 m)",
+   "ambito": "amba",
+   "radio_km": 3,
+   "proxima_edicion": "Mar 2027 (ventana; 2026: 2–6 mar)",
+   "inicio": "2027-03-01",
+   "fecha_estimada": true,
+   "convocatoria": "Sin dato",
+   "unidad": "sin balance de público publicado",
+   "confianza": "—",
+   "fuente": "https://mercado.com.ar/agenda/bafweek-realizara-su-edicion-invierno-2026-del-2-al-6-de-marzo",
+   "pauta_off": [
+    "plazaitalia",
+    "santafe",
+    "libsarmiento"
+   ],
+   "nota": "Semana de la moda de Buenos Aires: dos ediciones por año (marzo y agosto). Organizan Grupo IRSA, DF y La Rural; suma desfiles y pop-ups en shoppings como Alto Palermo, Patio Bullrich y Alcorta."
+  },
+  {
    "id": "jesusmaria",
    "nombre": "Festival de Doma y Folklore de Jesús María 2027",
    "rubro": "regional",
