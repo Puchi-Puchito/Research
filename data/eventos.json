@@ -405,10 +405,10 @@
    "proxima_edicion": "7–17 ene 2027",
    "inicio": "2027-01-07",
    "fecha_estimada": false,
-   "convocatoria": "Sin dato",
-   "unidad": "sin balance publicado",
-   "confianza": "—",
-   "fuente": "https://www.perfil.com/noticias/cordoba/jesus-maria-2027-cuando-es-quienes-actuan-y-cuando-salen-a-la-venta-las-entradas.phtml",
+   "convocatoria": "+220.000",
+   "unidad": "entradas vendidas, acumulado de la edición (2026); un solo medio, sin balance oficial",
+   "confianza": "Baja",
+   "fuente": "https://derechadiario.com.ar/economia/esus-maria-logro-record-220000-entradas-vendidas-tras-recibir-javier-milei",
    "pauta_off": [
     "rn9norte",
     "cba",
@@ -416,7 +416,7 @@
     "carlospaz",
     "rn38"
    ],
-   "nota": ""
+   "nota": "La edición 2025 vendió más de 206.000 entradas según FM Comunicar (otros medios dicen 211.000). Grilla y fechas 2027: perfil.com."
   },
   {
    "id": "cosquinfolk",
@@ -442,7 +442,7 @@
     "cba",
     "aepcba"
    ],
-   "nota": "La cifra cuenta visitantes a la ciudad durante las nueve lunas, no entradas al festival. Grilla 2027: perfil.com."
+   "nota": "La cifra cuenta visitantes a la ciudad durante las nueve lunas, no entradas al festival. En la plaza: 30.000 entradas vendidas en preventa y 5 noches agotadas (2026). Grilla 2027: perfil.com."
   },
   {
    "id": "costa",
@@ -458,10 +458,10 @@
    "proxima_edicion": "Ene–feb 2027",
    "inicio": "2027-01-02",
    "fecha_estimada": true,
-   "convocatoria": "Sin dato",
-   "unidad": "formato de parador, no evento",
-   "confianza": "—",
-   "fuente": "https://caras.perfil.com/noticias/empresas-y-protagonistas/playa-movistar-inauguro-su-sexto-ano-consecutivo-con-la-presentacion-de-fmk.phtml",
+   "convocatoria": "3.141.427",
+   "unidad": "visitantes a Mar del Plata del 1-dic-2025 al 28-feb-2026 (EMTURyC, provisorio); no es público de un parador",
+   "confianza": "Alta",
+   "fuente": "https://www.elmarplatense.com/mar-del-plata-tuvo-menos-visitantes-y-registro-el-peor-verano-desde-la-pandemia",
    "pauta_off": [
     "mdp",
     "pinamar",
