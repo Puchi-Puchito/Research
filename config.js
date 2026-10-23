@@ -9,5 +9,5 @@
 //
 // Si la clave queda vacía, el mapa usa calles de OpenStreetMap (vía CARTO).
 window.MAP_CONFIG = {
-  GOOGLE_MAPS_API_KEY: "AIzaSyAQFuwOkRbUriS8ke05JVeRzFhqRygHDV4"
+  GOOGLE_MAPS_API_KEY: "XXX"
 };
